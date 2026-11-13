@@ -292,7 +292,6 @@ class Transmitter:
 
 
 def main() -> None:
-
     led = LED(17)
     transmitter = Transmitter(DebugTransmission(), LEDTransmission(led))
     input_message = input("Enter a message: ").strip()
