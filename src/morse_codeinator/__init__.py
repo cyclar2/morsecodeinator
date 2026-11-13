@@ -292,8 +292,10 @@ class Transmitter:
 
 
 def main() -> None:
+
     led = LED(17)
     transmitter = Transmitter(DebugTransmission(), LEDTransmission(led))
-    message = Morse("[SOS] [SOS] HELLO WORLD")
+    input_message = input("Enter a message: ").strip()
+    message = Morse(input_message)
     print(message)
     transmitter.transmit(message)
